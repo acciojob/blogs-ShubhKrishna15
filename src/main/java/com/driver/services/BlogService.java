@@ -26,7 +26,7 @@ public class BlogService {
         Blog blog   = new Blog();
         blog.setContent(content);
         blog.setTitle(title);
-       // blog.setUser(user);
+        blog.setUser(user);
         blog.setPubDate(new Date());
         List<Blog> listOfBlogsByUser = user.getBlogList();
         listOfBlogsByUser.add(blog);

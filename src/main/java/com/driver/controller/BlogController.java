@@ -17,11 +17,11 @@ public class BlogController {
     BlogService blogServices;
 
     @PostMapping
-    public ResponseEntity<Blog> createBlog(@RequestParam Integer userId ,
+    public ResponseEntity createBlog(@RequestParam Integer userId ,
                                      @RequestParam String title,
                                      @RequestParam String content) {
         Blog blog=blogServices.createAndReturnBlog(userId,title,content);
-        return new ResponseEntity<>(blog,HttpStatus.CREATED);
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
     @DeleteMapping("/{blogId}")
