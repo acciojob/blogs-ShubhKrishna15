@@ -26,9 +26,9 @@ public class BlogService {
         blog.setContent(content);
         blog.setTitle(title);
         blog.setUser(user);
-        List<Blog> listOfBlogsByUser = user.getListOfBlogsByUser();
+        List<Blog> listOfBlogsByUser = user.getBlogList();
         listOfBlogsByUser.add(blog);
-        user.setListOfBlogsByUser(listOfBlogsByUser);
+        user.setBlogList(listOfBlogsByUser);
 
         userRepository1.save(user);
 

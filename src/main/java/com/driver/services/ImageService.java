@@ -22,10 +22,10 @@ public class ImageService {
         Blog blog = blogRepository2.findById(blogId).get();
         Image image = new Image();
         image.setDescription(description);
-        image.setDimension(dimensions);
-        List<Image> listOfImages = blog.getListOfImageInbBlog();
+        image.setDimensions(dimensions);
+        List<Image> listOfImages = blog.getImageList();
         listOfImages.add(image);
-        blog.setListOfImageInbBlog(listOfImages);
+        blog.setImageList(listOfImages);
 
 
         blogRepository2.save(blog);
@@ -43,7 +43,7 @@ public class ImageService {
         String[] screenArray = screenDimensions.split("X");
         Image image = imageRepository2.findById(id).get();
 
-        String imageDimension = image.getDimension();
+        String imageDimension = image.getDimensions();
         String []imageArray= imageDimension.split("X");
 
         int screen_length = Integer.parseInt(screenArray[0]);

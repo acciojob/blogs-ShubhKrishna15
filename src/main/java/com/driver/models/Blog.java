@@ -26,18 +26,18 @@ public class Blog {
     private User user;
 
     @OneToMany(mappedBy = "blog",cascade = CascadeType.ALL)
-    List<Image> listOfImageInBlog = new ArrayList<>();
+    List<Image> ImageList = new ArrayList<>();
 
 
     public Blog() {
     }
 
-    public List<Image> getListOfImageInbBlog() {
-        return listOfImageInBlog;
+    public List<Image> getImageList() {
+        return ImageList;
     }
 
-    public void setListOfImageInbBlog(List<Image> listOfImageInbBlog) {
-        this.listOfImageInBlog = listOfImageInbBlog;
+    public void setImageList(List<Image> imageList) {
+        ImageList = imageList;
     }
 
     public User getUser() {

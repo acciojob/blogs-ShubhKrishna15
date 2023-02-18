@@ -18,18 +18,18 @@ public class User {
     private String lastName;
 
     @OneToMany(mappedBy = "user",cascade=CascadeType.ALL)
-    List<Blog> listOfBlogsByUser = new ArrayList<>();
+    List<Blog> BlogList = new ArrayList<>();
 
 
     public User() {
     }
 
-    public List<Blog> getListOfBlogsByUser() {
-        return listOfBlogsByUser;
+    public List<Blog> getBlogList() {
+        return BlogList;
     }
 
-    public void setListOfBlogsByUser(List<Blog> listOfBlogsByUser) {
-        this.listOfBlogsByUser = listOfBlogsByUser;
+    public void setBlogList(List<Blog> blogList) {
+        this.BlogList = blogList;
     }
 
     public int getId() {
