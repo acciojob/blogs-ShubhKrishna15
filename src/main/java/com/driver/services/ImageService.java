@@ -44,9 +44,9 @@ public class ImageService {
         String dimensionOfImage = image.getDimensions();
         int dimensionOfImageInInteger = ( Integer.parseInt(String.valueOf(dimensionOfImage.charAt(0))))*(Integer.parseInt(String.valueOf(dimensionOfImage.charAt(2))));
         int screenDimensionsInInteger = ( Integer.parseInt(String.valueOf(screenDimensions.charAt(0))))*(Integer.parseInt(String.valueOf(screenDimensions.charAt(2))));
-        int ans = 0;
-        if(dimensionOfImageInInteger!=0){
-           ans = screenDimensionsInInteger/dimensionOfImageInInteger;}
+       // int ans = 0;
+
+          int  ans = screenDimensionsInInteger/dimensionOfImageInInteger;
         return ans;
 
 
