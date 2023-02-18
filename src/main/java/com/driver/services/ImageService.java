@@ -52,10 +52,10 @@ public class ImageService {
         int image_length = Integer.parseInt(imageArray[0]);
         int image_breadth = Integer.parseInt(imageArray[1]);
 
-        int screenArea = screen_length * screen_breadth;
-        int imageArea = image_length * image_breadth;
+        int leng = screen_length/image_length;
+        int breadth =  screen_breadth/image_length;
 
-        int ans = screenArea/imageArea;
+        int ans = leng*breadth;
         return ans;
 
 
