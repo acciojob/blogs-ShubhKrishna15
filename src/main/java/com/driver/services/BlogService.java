@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class BlogServices {
+public class BlogService {
 
     @Autowired
     BlogRepository blogRepository1;

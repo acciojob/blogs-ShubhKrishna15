@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ImageServices {
+public class ImageService {
 
     @Autowired
     BlogRepository blogRepository2;

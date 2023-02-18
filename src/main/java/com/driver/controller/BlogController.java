@@ -1,5 +1,5 @@
 package com.driver.controller;
-import com.driver.services.BlogServices;
+import com.driver.services.BlogService;
 import com.driver.models.Blog;
 
 
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 public class BlogController {
 
     @Autowired
-    BlogServices blogServices;
+    BlogService blogServices;
 
     @PostMapping
     public ResponseEntity<Blog> createBlog(@RequestParam Integer userId ,

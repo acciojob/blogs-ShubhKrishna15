@@ -1,6 +1,6 @@
 package com.driver.controller;
 
-import com.driver.services.UserServices;
+import com.driver.services.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,7 +13,7 @@ public class UserController {
 
 
     @Autowired
-    UserServices userServices;
+    UserService userServices;
     @PostMapping("/create")
     public ResponseEntity<Void> createUser(@RequestParam String username, @RequestParam String password) {
         userServices.createUser(username,password);
